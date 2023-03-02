@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:context="http://www.springframework.org/schema/context"
+
+
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+        http://www.springframework.org/schema/beans/spring-beans.xsd
+        http://www.springframework.org/schema/context
+        http://www.springframework.org/schema/context/spring-context.xsd">
+
+    <bean id="dog" class="com.zougn.pojo.Dog"/>
+    <bean id="cat" class="com.zougn.pojo.Cat"/>
+    <bean id="user" class="com.zougn.pojo.User"/>
+<!--    <bean id="user" class="com.zougn.com.zougn.pojo.User">-->
+<!--        <property name="cat" ref="cat"/>-->
+<!--        <property name="dog" ref="dog"/>-->
+<!--        <property name="str" value="qinjiang"/>-->
+<!--    </bean>-->
+
+    <!--autowire byName (按名称自动装配)-->
+<!--    <bean id="user" class="com.zougn.com.zougn.pojo.User" autowire="byName">-->
+<!--        <property name="str" value="qinjiang"/>-->
+<!--    </bean>-->
+
+    <!--autowire byType (按类型自动装配)-->
+<!--    <bean id="user" class="com.zougn.com.zougn.pojo.User" autowire="byType">-->
+<!--        <property name="str" value="qinjiang"/>-->
+<!--    </bean>-->
+
+    <!--使用注解-->
+    <context:annotation-config/>
+
+    <bean id="dog1" class="com.zougn.pojo.Dog"/>
+    <bean id="dog2" class="com.zougn.pojo.Dog"/>
+    <bean id="cat1" class="com.zougn.pojo.Cat"/>
+    <bean id="cat2" class="com.zougn.pojo.Cat"/>
+</beans>

@@ -1,0 +1,37 @@
+package com.zougn.pojo;
+
+public class User {
+
+    private String name;
+    private int age;
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public void setAge(int age) {
+        this.age = age;
+    }
+   public User() {
+       System.out.println("user无参构造方法");
+  }
+
+    public User(String name, int age) {
+        System.out.println("user有参构造方法");
+        this.name = name;
+        this.age = age;
+    }
+
+    public void show(){
+       System.out.println("name="+ name );
+  }
+
+
+    @Override
+    public String toString() {
+        return "User{" +
+                "name='" + name + '\'' +
+                ", age=" + age +
+                '}';
+    }
+}

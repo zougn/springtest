@@ -1,0 +1,17 @@
+package com.zougn.service.impl;
+
+import com.zougn.dao.UserDao;
+import com.zougn.service.UserService;
+
+public class UserServiceAllImpl implements UserService {
+    private UserDao userDao;
+    // 利用set实现
+    public void setUserDao(UserDao userDao) {
+        this.userDao = userDao;
+    }
+
+    @Override
+    public void getUser() {
+        userDao.getUser();
+    }
+}
